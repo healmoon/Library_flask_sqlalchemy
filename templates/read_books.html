@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2> Прочитанные книги </h2>
+  {% if books %}
+    <p> Поздравляем вы кажется знаете буковки и прочитали что-то</p>
+    {%- for book in books %}
+      <ul>
+        <li> Название: {{ book.name }} </li>
+        <li> Автор: {{ book.author }} </li>
+        <li> Автор: {{ book.genre }} </li>
+      </ul>
+      <hr>
+    {%- endfor %}
+  {% else %}
+    <p>У вас пока нет прочитанных книг</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>Книга {{ book.name }}</h2>
+      <ul>
+        <li> Название: {{ book.name }} </li>
+        <li> Автор: {{ book.author }} </li>
+          <img src="{{ book.cover_url }}" alt="Обложка книги">
+          <p>{{ book.text_url }}</p>
+      </ul>
+      <hr>
+{% endblock %}
